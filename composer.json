@@ -1,5 +1,5 @@
 {
-    "name": "spatie/laravel-webhook-client",
+    "name": "quick-order/laravel-webhook-client",
     "description": "Receive webhooks in Laravel apps",
     "keywords": [
         "spatie",
@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php": "^7.3",
         "illuminate/bus": "^6.0|^7.0",
         "illuminate/database": "^6.0|^7.0",
         "illuminate/support": "^6.0|^7.0"

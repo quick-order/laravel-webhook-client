@@ -5,7 +5,7 @@ namespace Spatie\WebhookClient;
 class WebhookConfigRepository
 {
     /** @var \Spatie\WebhookClient\WebhookConfig[] */
-    protected array $configs;
+    protected $configs;
 
     public function addConfig(WebhookConfig $webhookConfig)
     {

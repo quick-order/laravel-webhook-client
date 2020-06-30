@@ -8,9 +8,17 @@ use Spatie\WebhookClient\Events\InvalidSignatureEvent;
 use Spatie\WebhookClient\Exceptions\WebhookFailed;
 use Spatie\WebhookClient\Models\WebhookCall;
 
-class WebhookProcessor
-{
+class WebhookProcessor {
+
+    /**
+     * @var Request
+     */
+
     protected Request $request;
+
+    /**
+     * @var WebhookConfig
+     */
 
     protected WebhookConfig $config;
 

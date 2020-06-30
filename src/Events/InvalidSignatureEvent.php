@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class InvalidSignatureEvent
 {
     /** @var \Illuminate\Http\Request */
-    public Request $request;
+    public $request;
 
     public function __construct(Request $request)
     {

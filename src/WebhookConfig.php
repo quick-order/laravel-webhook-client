@@ -10,21 +10,55 @@ use Spatie\WebhookClient\WebhookResponse\RespondsToWebhook;
 
 class WebhookConfig
 {
-    public string $name;
+    public $name;
 
-    public string $signingSecret;
+    /**
+     * @var mixed|string
+     */
 
-    public string $signatureHeaderName;
+    public $signingSecret;
 
-    public SignatureValidator $signatureValidator;
+    /**
+     * @var mixed|string
+     */
 
-    public WebhookProfile $webhookProfile;
+    public $signatureHeaderName;
 
-    public RespondsToWebhook $webhookResponse;
+    /**
+     * @var \Illuminate\Contracts\Foundation\Application|mixed|SignatureValidator
+     */
 
-    public string $webhookModel;
+    public $signatureValidator;
 
-    public string $processWebhookJobClass;
+    /**
+     * @var \Illuminate\Contracts\Foundation\Application|mixed|WebhookProfile
+     */
+
+    public $webhookProfile;
+
+    /**
+     * @var \Illuminate\Contracts\Foundation\Application|mixed|RespondsToWebhook
+     */
+
+    public $webhookResponse;
+
+    /**
+     * @var mixed|string
+     */
+
+    public $webhookModel;
+
+    /**
+     * @var mixed|ProcessWebhookJob|string
+     */
+
+    public $processWebhookJobClass;
+
+    /**
+     * WebhookConfig constructor.
+     * @param array $properties
+     * @throws InvalidConfig
+     */
 
     public function __construct(array $properties)
     {
