@@ -33,7 +33,9 @@ class WebhookClientServiceProvider extends ServiceProvider
             $configRepository = new WebhookConfigRepository();
 
             collect(config('webhook-client.configs'))
-                ->map(fn (array $config) => new WebhookConfig($config))
+                ->map(function (array $config) {
+                    return new WebhookConfig($config);
+                })
                 ->each(function (WebhookConfig $webhookConfig) use ($configRepository) {
                     $configRepository->addConfig($webhookConfig);
                 });
