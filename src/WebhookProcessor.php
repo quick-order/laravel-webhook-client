@@ -14,13 +14,13 @@ class WebhookProcessor {
      * @var Request
      */
 
-    protected Request $request;
+    protected $request;
 
     /**
      * @var WebhookConfig
      */
 
-    protected WebhookConfig $config;
+    protected $config;
 
     public function __construct(Request $request, WebhookConfig $config)
     {
